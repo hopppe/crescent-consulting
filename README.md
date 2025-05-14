@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Crescent Consulting Website
+
+A modern, responsive website for Crescent Consulting, built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Responsive design that works on all device sizes
+- Modern UI with animations powered by Framer Motion
+- SEO-optimized with appropriate meta tags
+- Contact form for client inquiries
+- Fast and performant Next.js application
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.0.0 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/crescent-consulting.git
+cd crescent-consulting
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is designed to be deployed to Vercel. Follow these steps:
 
-## Learn More
+1. Create a Vercel account at [vercel.com](https://vercel.com) if you don't have one.
 
-To learn more about Next.js, take a look at the following resources:
+2. Install the Vercel CLI:
+```bash
+npm install -g vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the following command from the project root:
+```bash
+vercel
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Follow the prompts to link your project to Vercel.
 
-## Deploy on Vercel
+5. Once deployed, you can set up your custom domain (e.g., crescentconsulting.co) in the Vercel dashboard.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Post-Deployment Tasks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+As mentioned in the markdown file, after deployment:
+
+1. Set up domain name and email (e.g., via Google Workspace or Zoho)
+2. Ensure your favicon and meta tags are working correctly
+3. Set up any additional analytics tools if needed
+
+## Built With
+
+- [Next.js](https://nextjs.org/) - The React framework
+- [TypeScript](https://www.typescriptlang.org/) - For type safety
+- [Tailwind CSS](https://tailwindcss.com/) - For styling
+- [Framer Motion](https://www.framer.com/motion/) - For animations
+- [React Icons](https://react-icons.github.io/react-icons/) - For icons
+
+## License
+
+This project is licensed under the MIT License.
