@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white pt-16">
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10" style={{ top: "64px" }}>
         <div className="absolute left-0 right-0 bottom-0 h-80 md:h-96 bg-gradient-to-t from-dark-bg to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-full opacity-15">
           <div className="absolute -right-20 -top-20 w-96 h-96 bg-secondary opacity-20 rounded-full blur-3xl"></div>
@@ -156,14 +156,14 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="container z-10 px-4 md:px-6 text-center">
+      <div className="container z-20 px-4 md:px-6 text-center">
         <motion.h1 
           className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Crescent Consulting
+          Your Trusted Partner in Tailored Advisory Services
         </motion.h1>
         
         <motion.p 

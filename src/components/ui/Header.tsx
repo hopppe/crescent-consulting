@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-primary shadow-md' : 'bg-primary'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'shadow-md' : ''}`} style={{ backgroundColor: '#161c26', backdropFilter: 'none' }}>
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
         <Link href="/" className="flex items-center">
           <h1 className="text-2xl font-bold text-white">Crescent Consulting</h1>
@@ -53,11 +53,12 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
-            className="fixed inset-0 bg-primary z-50 pt-20 px-4"
+            className="fixed inset-0 z-[100] pt-20 px-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
+            style={{ backgroundColor: '#161c26' }}
           >
             <button 
               className="absolute top-4 right-4 text-2xl text-white"

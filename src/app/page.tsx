@@ -9,7 +9,9 @@ import Footer from "@/components/ui/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
+      <div className="relative z-50">
+        <Header />
+      </div>
       <div className="pt-16">
         <Hero />
         <KeyServices />
