@@ -157,7 +157,7 @@ const Hero = () => {
       </div>
       
       <div className="container z-20 px-4 md:px-6 text-center">
-        <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold text-primary mb-6 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
