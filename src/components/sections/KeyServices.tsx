@@ -33,12 +33,12 @@ const KeyServices = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   
   return (
-    <section id="services" className="py-20 dark-section">
+    <section id="services" className="py-20 bg-white">
       <div className="container px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="section-heading text-white">Key Services</h2>
+          <h2 className="section-heading text-primary">Key Services</h2>
           <div className="accent-line"></div>
-          <p className="subtitle-text text-white opacity-90">
+          <p className="subtitle-text text-gray-700">
             Our expert consultants provide tailored advisory services across a range of sectors.
           </p>
         </div>
@@ -50,7 +50,7 @@ const KeyServices = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="card p-8 transition-all hover:shadow-xl bg-white"
+              className="card p-8 transition-all hover:shadow-xl border border-gray-200"
               style={{
                 transform: isInView ? "none" : "translateY(50px)",
                 opacity: isInView ? 1 : 0,
@@ -61,7 +61,7 @@ const KeyServices = () => {
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-              <p className="text-gray-600 body-text">{service.description}</p>
+              <p className="text-gray-700">{service.description}</p>
             </motion.div>
           ))}
         </div>

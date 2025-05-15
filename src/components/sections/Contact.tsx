@@ -10,12 +10,12 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   
   return (
-    <section id="contact" className="py-20 dark-section">
+    <section id="contact" className="py-20 bg-white">
       <div className="container px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="section-heading text-white">Get In Touch</h2>
+          <h2 className="section-heading text-primary">Get In Touch</h2>
           <div className="accent-line"></div>
-          <p className="subtitle-text text-white opacity-90">
+          <p className="subtitle-text text-gray-700">
             Ready to work with us? Reach out to discuss how we can help your business.
           </p>
         </div>
@@ -25,7 +25,7 @@ const Contact = () => {
           className="max-w-3xl mx-auto"
         >
           <motion.div
-            className="card bg-white rounded-xl shadow-lg overflow-hidden"
+            className="card rounded-xl shadow-lg overflow-hidden border border-gray-200"
             style={{
               transform: isInView ? "none" : "translateY(50px)",
               opacity: isInView ? 1 : 0,
@@ -55,7 +55,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-primary">Consultation Request</h4>
-                    <p className="text-gray-600 body-text">
+                    <p className="text-gray-700 body-text">
                       Send us a message detailing your business needs for a personalized consultation.
                     </p>
                   </div>
@@ -65,7 +65,7 @@ const Contact = () => {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1 body-text">
+                    <label htmlFor="name" className="block text-sm font-medium mb-1 text-gray-700">
                       Name
                     </label>
                     <input
@@ -76,7 +76,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1 body-text">
+                    <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700">
                       Email
                     </label>
                     <input
@@ -88,7 +88,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1 body-text">
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1 text-gray-700">
                     Subject
                   </label>
                   <input
@@ -99,7 +99,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1 body-text">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-gray-700">
                     Message
                   </label>
                   <textarea
@@ -111,7 +111,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="btn-accent w-full py-3 text-primary font-medium"
+                  className="btn-accent w-full py-3 font-medium text-dark-bg"
                 >
                   Send Message
                 </button>

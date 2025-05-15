@@ -17,6 +17,9 @@
   --dark-bg: #161c26;
   --dark-text: #ffffff;
   --card-bg: #ffffff;
+  /* Card text colors */
+  --card-text: #333333;
+  --card-text-muted: #4a5568;
   /* Font families */
   --heading-font: 'Montserrat', sans-serif;
   --body-font: 'Open Sans', sans-serif;
@@ -40,6 +43,9 @@
     --secondary: #ff7657;
     --dark-bg: #0f1219;
     --card-bg: #1e2532;
+    /* Updated card text colors for dark mode */
+    --card-text: #f7fafc;
+    --card-text-muted: #cbd5e0;
   }
 }
 
@@ -62,6 +68,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   color: var(--primary);
   font-family: var(--heading-font);
+}
+
+/* Add new rule for headings in dark mode */
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+  }
 }
 
 h1 {
@@ -147,6 +160,24 @@ section {
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add rules for card text in both light and dark modes */
+.card h3 {
+  color: var(--primary);
+}
+
+.card p {
+  color: var(--card-text-muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card h3 {
+    color: var(--foreground);
+  }
+  .card p {
+    color: var(--card-text-muted);
+  }
 }
 
 .section-heading {

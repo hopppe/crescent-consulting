@@ -30,7 +30,7 @@ const DetailedServices = () => {
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h2 className="section-heading text-primary">Our Services in Detail</h2>
           <div className="accent-line"></div>
-          <p className="text-gray-600 text-lg font-normal">
+          <p className="text-lg font-normal text-gray-700">
             We provide comprehensive consulting services tailored to your specific needs.
           </p>
         </div>
@@ -53,7 +53,7 @@ const DetailedServices = () => {
                 <>
                   <div className="md:col-span-8 mb-6 md:mb-0">
                     <h3 className="text-2xl font-bold text-primary mb-3 md:mb-4">{service.title}</h3>
-                    <p className="text-gray-600 text-base md:text-lg font-normal leading-relaxed">{service.description}</p>
+                    <p className="text-base md:text-lg font-normal text-gray-700 leading-relaxed">{service.description}</p>
                   </div>
                   <div className="md:col-span-4">
                     {index === 0 ? (
@@ -65,6 +65,18 @@ const DetailedServices = () => {
                           height={400}
                           sizes="(max-width: 768px) 100vw, 33vw"
                           className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          priority
+                        />
+                      </div>
+                    ) : index === 2 ? (
+                      <div className="rounded-lg overflow-hidden shadow-lg h-60 sm:h-72 md:h-full bg-white">
+                        <Image 
+                          src="/images/clipart_business.png" 
+                          alt="Sales strategy review illustration"
+                          width={600}
+                          height={400}
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="w-full h-full object-contain transition-transform duration-700 hover:scale-105"
                           priority
                         />
                       </div>
@@ -98,7 +110,7 @@ const DetailedServices = () => {
                   </div>
                   <div className="md:col-span-8 order-2 md:order-2">
                     <h3 className="text-2xl font-bold text-primary mb-3 md:mb-4">{service.title}</h3>
-                    <p className="text-gray-600 text-base md:text-lg font-normal leading-relaxed">{service.description}</p>
+                    <p className="text-base md:text-lg font-normal text-gray-700 leading-relaxed">{service.description}</p>
                   </div>
                 </>
               )}

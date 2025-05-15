@@ -3,16 +3,17 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   
   return (
-    <section id="about" className="py-20 dark-section">
+    <section id="about" className="py-20 bg-white">
       <div className="container px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="section-heading">About Us</h2>
+          <h2 className="section-heading text-primary">About Us</h2>
           <div className="accent-line"></div>
         </div>
         
@@ -26,12 +27,15 @@ const About = () => {
               opacity: isInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
             }}
+            className="rounded-lg overflow-hidden shadow-xl"
           >
-            <div className="rounded-lg overflow-hidden shadow-xl bg-primary h-80">
-              <div className="w-full h-full bg-gradient-to-r from-primary to-primary-light flex items-center justify-center">
-                <div className="text-white text-9xl font-bold opacity-30">C</div>
-              </div>
-            </div>
+            <Image 
+              src="/images/aboutusmap.png" 
+              alt="Global map showing our consulting presence"
+              width={600}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
           </motion.div>
           
           <motion.div
@@ -41,16 +45,16 @@ const About = () => {
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"
             }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Who We Are</h3>
-            <p className="subtitle-text text-white opacity-90 mb-4">
+            <h3 className="text-2xl font-bold text-primary mb-6">Who We Are</h3>
+            <p className="subtitle-text text-gray-700 mb-4">
               Crescent Consulting brings together experienced independent consultants who deliver tailored solutions 
               to businesses across the UK, US, and the Middle East.
             </p>
-            <p className="subtitle-text text-white opacity-90 mb-4">
+            <p className="subtitle-text text-gray-700 mb-4">
               Our expertise spans various sectors, allowing us to provide comprehensive advisory services 
               that address the unique challenges faced by our clients.
             </p>
-            <p className="subtitle-text text-white opacity-90">
+            <p className="subtitle-text text-gray-700">
               We pride ourselves on delivering effective strategies and practical solutions, 
               helping businesses navigate complexities and achieve sustainable growth.
             </p>
